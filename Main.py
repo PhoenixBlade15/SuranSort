@@ -1,14 +1,16 @@
-def removewhitespace( Name ):
-    if len(Name) == 0:
-        return ""
-    while Name[0] == ' ':
-        Name = Name[1, len() ]
+from Sort import lengthsort
 
-
-f = open("C:\\users\\Matthew\\Desktop\\Sort me.txt", "r")
-if f.mode == 'r':
-    contents = f.read()
+#Gets the file contents and tells the user what is currently in the file and puts it in an list for ease of access
+file = open("C:\\Users\\Matthew\\Desktop\\SuranSort\\SuranSort\\Sort Me.txt", "r")
+if file.mode == 'r':
+    contents = file.readlines()
+    NameList = []
     print("Contents in folder are: ")
-    print(contents)
+    for Names in contents[1:]:
+        CurrName = Names.replace(" ", "")
+        print(CurrName)
+        NameList.append(CurrName[0:len(CurrName)-1])
+    NameList = lengthsort(NameList)
+    print(NameList)
 
-input()
+#input()
