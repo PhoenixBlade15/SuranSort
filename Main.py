@@ -45,3 +45,6 @@ if file.mode == 'r':
         print("Sorted file exported to " + Path)
     except:
         print("Could not export into text file.")
+
+# Hold the viewing window open so user can see the final outputs of the program
+input()
