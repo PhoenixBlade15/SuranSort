@@ -26,7 +26,7 @@ if file.mode == 'r':
         CurrName = Names.replace(" ", "")
         print(CurrName)
         NameList.append(CurrName[0:len(CurrName)-1])
-    file.close()
+    # file.close()
     # Using Python Sort you can sort alphabetically easily then sort using my method in Sort.py
     NameList.sort()
     NameList = lengthsort(NameList)
@@ -39,12 +39,14 @@ if file.mode == 'r':
     # Attempts to save the sorted list of names in the same place as the text file needing to be sorted.
     try:
         Path = Path + "\\Sorted.txt"
-        FileOut = open(Path, "w+")
+        Path.replace("\\", "\\\\")
+        FileOut = open(Path, "w")
         for Names in NameList:
             FileOut.write(Names +"\n")
-        print("Sorted file exported to " + Path)
+        print("Sorted file exported to " + Path.replace("\\\\", "\\"))
     except:
         print("Could not export into text file.")
 
 # Hold the viewing window open so user can see the final outputs of the program
+FileOut.close()
 input()
