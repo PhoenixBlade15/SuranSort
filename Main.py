@@ -47,5 +47,3 @@ if file.mode == 'r':
 
 # Hold the viewing window open so user can see the final outputs of the program
 FileOut.close()
-print("Press enter to close.")
-input()

@@ -7,3 +7,5 @@ will run.
 
 Be sure to keep Main.py and Sort.py in the same folder as each other otherwise the code will not work.
 With this version automated testing is on. Must keep the "Sort Me.txt" file in the same folder as the Main.py.
+"Expected.txt" and "TEST.bat" is to be in the same folder as "Sort Me.txt" and is what you expect the sorted output to be.
+In Order to run the test double click on the "TEST.bat" file and it shall inform you if the output of the program is the same as the expected file.
