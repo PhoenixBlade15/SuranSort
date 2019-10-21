@@ -1,15 +1,14 @@
 from Sort import lengthsort
+import inspect, os
 
 # Sets a default path for most computers and asks the user for their own path and opens the file
-Path = "C:\\"
+Path = inspect.stack()[0][1]
+Path = Path.replace("Main.py", "Sort Me.txt")
+
 Error = True
 while Error:
     try:
-        print("Enter the path for your file(" + Path +"):")
-        Path = input()
-        PathWithTxt = Path + "\\Sort Me.txt"
-        PathWithTxt.replace("\\", "\\\\")
-        file = open(PathWithTxt, "r")
+        file = open(Path, "r")
         Error = False
     except:
         print("File does not exist or path invalid.")
@@ -38,8 +37,7 @@ if file.mode == 'r':
         print(Names + "\n")
     # Attempts to save the sorted list of names in the same place as the text file needing to be sorted.
     try:
-        Path = Path + "\\Sorted.txt"
-        Path.replace("\\", "\\\\")
+        Path = Path.replace("Sort Me.txt", "Sorted.txt")
         FileOut = open(Path, "w")
         for Names in NameList:
             FileOut.write(Names +"\n")
