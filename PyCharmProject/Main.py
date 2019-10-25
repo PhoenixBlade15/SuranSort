@@ -1,34 +1,54 @@
-from Sort import lengthsort
 import inspect, os
+
+
+# Sort the names by length using bubblesort
+def lengthsort(NameList):
+    for Names in NameList[0:-1]:
+        for CurrName in NameList[0:-1]:
+            CurrNameIndex = NameList.index(CurrName)
+            if len(CurrName) > len(NameList[CurrNameIndex+1]):
+                NameList[CurrNameIndex], NameList[CurrNameIndex+1] = NameList[CurrNameIndex+1], NameList[CurrNameIndex]
+    return NameList
+
+
+# False will be default, test.bat changes this to true to test descending order
+Descending = False
 
 # Sets a default path for most computers and asks the user for their own path and opens the file
 Path = inspect.stack()[0][1]
 Path = Path.replace("Main.py", "Sort Me.txt")
 
 Error = True
-while Error:
-    try:
-        file = open(Path, "r")
-        Error = False
-    except:
-        print("File does not exist or path invalid.")
-        print()
-        Error = True
+try:
+    file = open(Path, "r")
+    Error = False
+except:
+    print("File does not exist or path invalid.")
+    print()
+    Error = True
+
+# Exits when an Error occurs with code of 1
+if Error:
+    exit(1)
 
 # Gets the file contents and tells the user what is currently in the file and puts it in an list for ease of access
 if file.mode == 'r':
     contents = file.readlines()
     NameList = []
+
     # Prints the contents of the file while adding the name to a list
     print("Contents in folder are: ")
     for Names in contents[1:]:
-        CurrName = Names.replace(" ", "")
+        CurrName = Names.strip()
         print(CurrName)
-        NameList.append(CurrName[0:len(CurrName)-1])
-    # file.close()
+        NameList.append(CurrName)
+
     # Using Python Sort you can sort alphabetically easily then sort using my method in Sort.py
     NameList.sort()
     NameList = lengthsort(NameList)
+
+    if Descending:
+        NameList.reverse()
 
     # Prints the names in the list for the user to see sorted.
     print()
