@@ -1,14 +1,4 @@
-import inspect, os
-
-
-# Sort the names by length using bubblesort
-def lengthsort(NameList):
-    for Names in NameList[0:-1]:
-        for CurrName in NameList[0:-1]:
-            CurrNameIndex = NameList.index(CurrName)
-            if len(CurrName) > len(NameList[CurrNameIndex+1]):
-                NameList[CurrNameIndex], NameList[CurrNameIndex+1] = NameList[CurrNameIndex+1], NameList[CurrNameIndex]
-    return NameList
+import inspect
 
 
 # False will be default, test.bat changes this to true to test descending order
@@ -45,10 +35,7 @@ if file.mode == 'r':
 
     # Using Python Sort you can sort alphabetically easily then sort using my method in Sort.py
     NameList.sort()
-    NameList = lengthsort(NameList)
-
-    if Descending:
-        NameList.reverse()
+    NameList.sort(reverse = Descending, key=len)
 
     # Prints the names in the list for the user to see sorted.
     print()
