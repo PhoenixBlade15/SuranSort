@@ -37,3 +37,6 @@ How to run test:
 For this program to work "Main.py", "Sort Me.txt", "Expected.txt", "ExpectedR.txt", "TEST.bat" Must all be in the same folder.
 
 If program exits with code of 1 this means the file does not exist.
+
+If the "TEST.bat" file does not run and output if there are differences or not right click this file, then click edit with notepad
+and change both appearances of "py Main.py %DESC%" to "python Main.py %DESC%"
