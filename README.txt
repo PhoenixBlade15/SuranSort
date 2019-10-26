@@ -1,11 +1,39 @@
-https://github.com/PhoenixBlade15/SuranSort
-This is written with Python version 3.7.3 inside of Pycharm. In order to run this you need to download the project 
-as well as downloading Python 3.7.3 or newer and Pycharm for simplicity. Then open the project in Pycharm and then
-click Run at the top and run main. 
-Second way to run is to just install Python 3.7.3 and then unzip the folder and double click Main.py and the program 
-will run.
+This program is from: https://github.com/PhoenixBlade15/SuranSort
+This is written with Python version 3.7.3 inside of PyCharm. 
 
-Be sure to keep Main.py and Sort.py in the same folder as each other otherwise the code will not work.
-With this version automated testing is on. Must keep the "Sort Me.txt" file in the same folder as the Main.py.
-"Expected.txt" and "TEST.bat" is to be in the same folder as "Sort Me.txt" and is what you expect the sorted output to be.
-In Order to run the test double click on the "TEST.bat" file and it shall inform you if the output of the program is the same as the expected file.
+
+How to Run:
+
+1) Download Python 3.7.3
+	Download Link: https://www.python.org/downloads/release/python-373/
+
+2) Download this project
+
+3) Keep the "Sort Me.txt" file in the same with the "Main.py" file
+
+4) Run "Main.py"
+	A file called "Sorted.txt" will appear in the same folder with the output of the program
+
+5) Optional Step to run in PyCharm: Download PyCharm
+	Download Link: https://www.jetbrains.com/pycharm/download/?_ga=2.186932587.257390207.1572047426-367004066.1571614323#section=windows
+
+	5.1) Open the project in PyCharm
+	
+	5.2) Click run, the green arrow on the top of the window, and program will run
+
+
+How to run test:
+
+1) Download Python 3.7.3
+	Download Link: https://www.python.org/downloads/release/python-373/
+
+2) Download this project
+
+3) Keep the "Sort Me.txt", "TEST.bat", and "Expected.txt" files in the same folder with the "Main.py" file
+
+4) Run "TEST.bat" and a window will open with the differences between program output and "Expected.txt"
+
+
+For this program to work "Main.py", "Sort Me.txt", "Expected.txt", "TEST.bat" Must all be in the same folder.
+
+If program exits with code of 1 this means the file does not exist.
