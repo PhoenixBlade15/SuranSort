@@ -1,8 +1,14 @@
 import inspect
-
+import sys
 
 # False will be default, test.bat changes this to true to test descending order
 Descending = False
+for arg in sys.argv:
+    if arg == "True":
+        Descending = True
+        break
+    if arg == "False":
+        break
 
 # Sets a default path for most computers and asks the user for their own path and opens the file
 Path = inspect.stack()[0][1]
@@ -32,6 +38,7 @@ if file.mode == 'r':
         CurrName = Names.strip()
         print(CurrName)
         NameList.append(CurrName)
+    file.close()
 
     # Using Python Sort you can sort alphabetically easily then sort using my method in Sort.py
     NameList.sort()
@@ -44,7 +51,10 @@ if file.mode == 'r':
         print(Names + "\n")
     # Attempts to save the sorted list of names in the same place as the text file needing to be sorted.
     try:
-        Path = Path.replace("Sort Me.txt", "Sorted.txt")
+        if Descending:
+            Path = Path.replace("Sort Me.txt", "SortedR.txt")
+        else:
+            Path = Path.replace("Sort Me.txt", "Sorted.txt")
         FileOut = open(Path, "w")
         for Names in NameList:
             FileOut.write(Names +"\n")
