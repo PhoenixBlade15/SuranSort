@@ -33,10 +33,8 @@ if file.mode == 'r':
     NameList = []
 
     # Prints the contents of the file while adding the name to a list
-    print("Contents in folder are: ")
     for Names in contents[1:]:
         CurrName = Names.strip()
-        print(CurrName)
         NameList.append(CurrName)
     file.close()
 
@@ -44,11 +42,6 @@ if file.mode == 'r':
     NameList.sort()
     NameList.sort(reverse = Descending, key=len)
 
-    # Prints the names in the list for the user to see sorted.
-    print()
-    print("The names sorted are: ")
-    for Names in NameList:
-        print(Names + "\n")
     # Attempts to save the sorted list of names in the same place as the text file needing to be sorted.
     try:
         if Descending:
@@ -61,6 +54,7 @@ if file.mode == 'r':
         print("Sorted file exported to " + Path.replace("\\\\", "\\"))
     except:
         print("Could not export into text file.")
+print()
 
 # Hold the viewing window open so user can see the final outputs of the program
 FileOut.close()
