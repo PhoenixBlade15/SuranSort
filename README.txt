@@ -29,11 +29,11 @@ How to run test:
 
 2) Download this project
 
-3) Keep the "Sort Me.txt", "TEST.bat", and "Expected.txt" files in the same folder with the "Main.py" file
+3) Keep the "Sort Me.txt", "TEST.bat", "Expected.txt", and "ExpectedR.txt" files in the same folder with the "Main.py" file
 
-4) Run "TEST.bat" and a window will open with the differences between program output and "Expected.txt"
+4) Run "TEST.bat" and a window will open with the differences between program output and the corresponding expected file
 
 
-For this program to work "Main.py", "Sort Me.txt", "Expected.txt", "TEST.bat" Must all be in the same folder.
+For this program to work "Main.py", "Sort Me.txt", "Expected.txt", "ExpectedR.txt", "TEST.bat" Must all be in the same folder.
 
 If program exits with code of 1 this means the file does not exist.
