@@ -1,9 +1,11 @@
 #!/bin/bash
 
 python Main.py False
-ascOut=$(diff Sorted.txt Expected.txt)
+diff Sorted.txt Expected.txt
+ascOut=$?
 
 python Main.py True
-descOut=$(diff SortedR.txt ExpectedR.txt)
+diff SortedR.txt ExpectedR.txt
+descOut=$?
 
 exit $descOut && $ascOut
