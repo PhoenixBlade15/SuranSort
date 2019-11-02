@@ -1,3 +1,5 @@
 language: python
 script:
-  -Main,py
+  - cd SortingProgram
+  - chmod +x NotWindowsTest.sh
+  - ./NotWindowsTest.sh
