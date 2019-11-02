@@ -4,4 +4,4 @@ python:
 script:
   - cd SortingProgram
   - chmod +x NotWindowsTest.sh
-  - NotWindowsTest.sh
+  - ./NotWindowsTest.sh
