@@ -2,15 +2,11 @@
 
    python Main.py False
    diff --text Sorted.txt Expected.txt
-   ascending_result=$?
-
-   echo $ascending_result
-   echo $ascending_result
-   echo $ascending_result
+   ascOut=$?
    
    python Main.py True
    diff --text SortedR.txt ExpectedR.txt
-   descending_result=$?
+   descOut=$?
 
-   exit $ascending_result
+   exit $ascOut && $descOut
    
