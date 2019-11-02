@@ -1,11 +1,11 @@
 #!/bin/bash
 
-python3 Main.py False
+python Main.py False
 sleep 2s
 diff Sorted.txt Expected.txt
 ascOut=$?
 
-python3 Main.py True
+python Main.py True
 sleep 2s
 diff SortedR.txt ExpectedR.txt
 descOut=$?
