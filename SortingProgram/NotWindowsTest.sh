@@ -1,11 +1,12 @@
-#!/bin/bash
+   #!/bin/bash
 
-python Main.py False
-diff Sorted.txt Expected.txt
-ascOut=$?
+   python Main.py False
+   diff Sorted.txt Expected.txt
+   ascending_result=$?
 
-python Main.py True
-diff SortedR.txt ExpectedR.txt
-descOut=$?
+   python Main.py True
+   diff SortedR.txt ExpectedR.txt
+   descending_result=$?
 
-exit $descOut && $ascOut
+   exit $ascending_result && $descending_result
+   
