@@ -8,5 +8,5 @@
    diff SortedR.txt ExpectedR.txt
    descending_result=$?
 
-   exit $ascending_result && $descending_result
+   exit $ascending_result
    
